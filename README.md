@@ -1,6 +1,17 @@
 # Repo Why
 
+[![Install on Marketplace](https://img.shields.io/badge/VS%20Code-Install-007ACC?style=flat&logo=visualstudiocode&logoColor=white)](https://marketplace.visualstudio.com/items?itemName=bekitil.repo-why)
+[![Version](https://img.shields.io/visual-studio-marketplace/v/bekitil.repo-why?label=version&color=blue)](https://marketplace.visualstudio.com/items?itemName=bekitil.repo-why)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/bekitil.repo-why?label=installs&color=green)](https://marketplace.visualstudio.com/items?itemName=bekitil.repo-why)
+[![Rating](https://img.shields.io/visual-studio-marketplace/r/bekitil.repo-why?label=rating)](https://marketplace.visualstudio.com/items?itemName=bekitil.repo-why)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+
+
 **Understand any codebase in minutes.** A VS Code extension that visualizes how files connect, then lets you ask questions about your project in plain English — answered by an AI that has read your code.
+
+> **[Install Repo Why →](https://marketplace.visualstudio.com/items?itemName=bekitil.repo-why)**
+**[Install in VS Code (one-click)](vscode:extension/bekitil.repo-why)**
+
 ![Dependency graph view](media/screenshot-graph.png)
 
 ## What it does
