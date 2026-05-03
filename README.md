@@ -10,7 +10,7 @@
 **Understand any codebase in minutes.** A VS Code extension that visualizes how files connect, then lets you ask questions about your project in plain English — answered by an AI that has read your code.
 
 > **[Install Repo Why →](https://marketplace.visualstudio.com/items?itemName=bekitil.repo-why)**
-**[Install in VS Code (one-click)](vscode:extension/bekitil.repo-why)**
+> **[Install in VS Code (one-click)](vscode:extension/bekitil.repo-why)**
 
 ![Dependency graph view](media/screenshot-graph.png)
 
