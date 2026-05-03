@@ -1,71 +1,81 @@
-# repo-why README
+# Repo Why
 
-This is the README for your extension "repo-why". After writing up a brief description, we recommend including the following sections.
+**Understand any codebase in minutes.** A VS Code extension that visualizes how files connect, then lets you ask questions about your project in plain English — answered by an AI that has read your code.
+
+## What it does
+
+Drop into an unfamiliar codebase. Click **Scan workspace** and you instantly see how every file relates to every other file as an interactive dependency graph. Click any file to open it.
+
+Then switch to the **Ask** tab and ask anything:
+
+- *"What does this project do?"*
+- *"Where is authentication handled?"*
+- *"How does the frontend talk to the backend?"*
+- *"What's `client.ts` for?"*
+
+The AI finds the relevant files in your project and answers with concrete references — no more guessing or grepping.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Interactive dependency graph** — every file as a node, every import as an edge. Force-directed layout. Click to open.
+- **Codebase-aware Q&A** — ask in plain English, get answers grounded in your actual code with cited source files.
+- **Streaming responses** — answers appear word-by-word as they're generated.
+- **Multi-turn conversations** — follow up with "explain that more" and the model knows what you mean.
+- **Bring your own key** — works with Groq's free tier. Your API key lives in your OS keychain. No backend, no telemetry, no analytics.
+- **Multiple languages** — TypeScript, JavaScript, Python, Go, Rust, Java, Kotlin, C/C++, C#, Ruby, PHP, Swift, and more.
 
-For example if there is an image subfolder under your extension project workspace:
+## Getting started
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Install Repo Why from the VS Code Marketplace.
+2. Get a free Groq API key at [console.groq.com/keys](https://console.groq.com/keys).
+3. Click the Repo Why icon in the activity bar, open the **Settings** tab, paste your key, click **Save**.
+4. Open any project folder.
+5. Click **Graph → Scan workspace** to visualize, or **Ask** to chat about your code.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Privacy
 
-## Requirements
+Your code and questions are sent only to the AI provider you configured (Groq by default). The extension has no backend and collects no telemetry. Your API key is stored in VS Code's encrypted SecretStorage (OS keychain on macOS, Credential Manager on Windows, libsecret on Linux) and never written to plaintext settings files.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## How it works
 
-## Extension Settings
+When you scan a workspace:
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. Repo Why finds every source file in your project, skipping `node_modules`, build outputs, and similar generated folders.
+2. It parses each file's imports to build a dependency graph.
+3. The graph renders as an interactive force-directed visualization.
 
-For example:
+When you ask a question:
 
-This extension contributes the following settings:
+1. Repo Why scores each file by how relevant it is to your question (keyword overlap on file paths and contents).
+2. It picks the top files, packs them into a prompt with your question and recent chat history.
+3. It streams the answer back token-by-token.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Roadmap
 
-## Known Issues
+- **Git "why" layer** — select any code, ask "why does this exist?", get an AI-synthesized answer based on the original PR, commit messages, and contributors.
+- **Local-only mode via Ollama** — zero data leaves your machine.
+- **Tree-sitter parsing** for more accurate, function-level retrieval.
+- **More provider support** — Anthropic Claude, OpenAI, Google Gemini.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Development
 
-## Release Notes
+```bash
+git clone https://github.com/bekiTil/repo-why
+cd repo-why
+npm install
+npm run compile
+```
 
-Users appreciate release notes as you update your extension.
+Press F5 in VS Code to launch the Extension Development Host with the extension loaded.
 
-### 1.0.0
+## License
 
-Initial release of ...
+MIT — free to use, modify, and distribute.
 
-### 1.0.1
+## Issues & feedback
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Open an issue at [github.com/bekiTil/repo-why/issues](https://github.com/bekiTil/repo-why/issues).
 
 ---
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Built for developers who would rather understand a codebase than memorize it.
