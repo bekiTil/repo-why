@@ -1,13 +1,38 @@
 {
   "name": "repo-why",
-  "displayName": "repo-why",
-  "description": "an extension for making sure you understand what the repo does",
-  "version": "0.0.1",
+  "displayName": "Repo Why",
+  "description": "Understand any codebase with an AI assistant. Visualize dependencies, ask questions, get answers grounded in your code.",
+  "version": "0.1.0",
+  "publisher": "bekiTil",
+  "author": {
+    "name": "Beki",
+    "email": "btilahun287@gmail.com"
+  },
+  "license": "MIT",
+  "icon": "media/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bekiTil/repo-why"
+  },
+  "bugs": {
+    "url": "https://github.com/bekiTil/repo-why/issues"
+  },
+  "homepage": "https://github.com/bekiTil/repo-why#readme",
   "engines": {
     "vscode": "^1.103.0"
   },
   "categories": [
+    "Visualization",
     "Other"
+  ],
+  "keywords": [
+    "ai",
+    "codebase",
+    "graph",
+    "dependency",
+    "chat",
+    "groq",
+    "code understanding"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
