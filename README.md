@@ -1,6 +1,7 @@
 # Repo Why
 
 **Understand any codebase in minutes.** A VS Code extension that visualizes how files connect, then lets you ask questions about your project in plain English — answered by an AI that has read your code.
+![Dependency graph view](media/screenshot-graph.png)
 
 ## What it does
 
@@ -14,6 +15,12 @@ Then switch to the **Ask** tab and ask anything:
 - *"What's `client.ts` for?"*
 
 The AI finds the relevant files in your project and answers with concrete references — no more guessing or grepping.
+
+## In action
+
+Ask in plain English, get answers grounded in your actual code:
+
+![AI chat answering questions about the codebase](media/screenshot-chat.png)
 
 ## Features
 

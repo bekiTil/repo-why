@@ -2,7 +2,7 @@
   "name": "repo-why",
   "displayName": "Repo Why",
   "description": "Understand any codebase with an AI assistant. Visualize dependencies, ask questions, get answers grounded in your code.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "bekiTil",
   "author": {
     "name": "Beki",
