@@ -2,7 +2,7 @@
   "name": "repo-why",
   "displayName": "Repo Why",
   "description": "Understand any codebase with an AI assistant. Visualize dependencies, ask questions, get answers grounded in your code.",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "publisher": "bekiTil",
   "author": {
     "name": "Beki",
@@ -59,8 +59,28 @@
       {
         "command": "repo-why.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "repoWhy.askWhy",
+        "title": "Repo Why: Why does this exist?",
+        "category": "Repo Why"
+      },
+      {
+        "command": "repoWhy.openInEditor",
+        "title": "Repo Why: Open in Editor Tab",
+        "category": "Repo Why",
+        "icon": "$(link-external)"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "repoWhy.askWhy",
+          "when": "editorHasSelection",
+          "group": "navigation@99"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -71,13 +91,16 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.103.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
-    "typescript-eslint": "^8.56.1",
+    "@types/vscode": "^1.103.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
     "eslint": "^9.39.3",
     "typescript": "^5.9.3",
-    "@vscode/test-cli": "^0.0.12",
-    "@vscode/test-electron": "^2.5.2"
+    "typescript-eslint": "^8.56.1"
+  },
+  "dependencies": {
+    "simple-git": "^3.36.0"
   }
 }
